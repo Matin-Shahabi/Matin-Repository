@@ -11,10 +11,8 @@ def scores_students(lst):
     averages = {
         sub: sum(map(lambda d: d[sub], scores)) / len(scores)for sub in subject
     }
-    new_averages = {i: round(j, 2) for i,j in averages.items()}
+    new_averages = {i: round(j, 3) for i,j in averages.items()}
     return new_averages
-
-
 
 print(scores_students(raw_scores))
 
